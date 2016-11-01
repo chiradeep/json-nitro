@@ -40,7 +40,7 @@ You can use the generated schema to generate Golang structs:
 ./generate.sh $GOPATH/github.com/chiradeep/go-nitro/netscaler
 ```
 
-Thanks to [Generate](https://github.com/a-h/generate) from [Adrian](http://adrianhesketh.com)
+Thanks to [Generate](https://github.com/a-h/generate) from [Adrian](http://adrianhesketh.com). A Go client to NetScaler that uses this generated code is here: [https://github.com/chiradeep/go-nitro](https://github.com/chiradeep/go-nitro)
 
 ## Gory Details
 The fork from [JJSchema](https://github.com/reinert/JJSchema) was necessary since the NITRO Java SDK followed a different convention for getters: instead of `getFoo()`, it uses `get_foo()`. Another useful hack was to figure out which elements in the JSON were read-only (those without a corresponding `set_` method). Last but not least, the Java code provides enum-like inner classes for various fields. For example, a `persistencetype` field in `lbvserver` has a corresponding `persistencetypeEnum` inner class. The inner class has constants for the possible values. This fork from JJSchema uses this to determine the `enums` in the JSON schema.
