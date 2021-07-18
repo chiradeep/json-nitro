@@ -2,6 +2,9 @@
 
 [NITRO](https://docs.citrix.com/en-us/netscaler/11/nitro-api/nitro-rest/nitro-rest-general.html) is a REST API to program the Citrix NetScaler load balancer. While there are Java and Python clients, it is somewhat difficult to write new clients since the JSON payloads are not well documented. This project reverse engineers the JSON schema from the Nitro Java SDK, then enables a roundtrip to Golang structs. (Golang SDK is currently work-in-progress [here](https://github.com/chiradeep/go-nitro) )
 
+## This repo is stale
+There is no official support for generating jsonschema from NITRO. The most up to date schema is usually available at https://github.com/citrix/adc-nitro-go
+
 ## Pre-requisites
 * JDK 7+
 * Maven
